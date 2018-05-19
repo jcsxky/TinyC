@@ -1,0 +1,158 @@
+extern int yyy(int n);
+extern int zzz(int n);
+extern int xxx(int n);
+extern int uuuu(int u);
+extern double k();
+extern int s(int x);
+int xxx(int n){
+	int k;
+	if(n==1)
+		output(333333);
+	else
+		yyy(n-1);
+}
+int yyy(int n){
+	if(n==1)
+		output(444444);
+	else{
+		zzz(n-1);
+		int kkk;
+	}
+}
+int zzz(int n){
+	if(n==1)
+		output(555555);
+	else{
+		int ooo;
+		xxx(n-1);
+	}
+}
+
+int f(int x){
+	if(x==1)
+		return 1;
+	else{
+		s(0);
+		int u;
+		int v;
+		v=f(x-1);
+		return x*v;
+	}
+}
+int s(int n){
+	int i;
+	int sum;
+	i=sum=0;
+	while(1){
+		int aa;
+		int bb;
+		i=i+1;
+		if(i>n){
+			int aaaaa;
+			return sum;
+		}
+		sum=sum+i;
+	}
+	return sum;
+}
+
+int max(int aa,int bb){
+	int ooo;
+	if(aa>=bb)
+		return aa;
+	else
+		return bb;
+}
+
+int avg(int a,int b){
+	int c;
+	return (a+b)/2;
+}
+
+int c[10,10,10];
+double g(){
+	int i;int j;int k;int n;
+	n=0;
+	i=0;
+	while(i<=9){
+		j=0;
+		while(j<=9){
+			k=0;
+			while(k<=9){
+				c[i,j,k]=n;
+				n=n+1;
+				k=k+1;
+			}
+			j=j+1;
+		}
+		i=i+1;
+	}
+	return k();
+}
+int ss[10];
+void sort(int n){
+	if(n>10)
+		return ;
+	int i;
+	int j;
+	int t;
+	i=0;
+	while(i<n){
+		input(ss[i]);
+		i=i+1;
+	}
+	i=1;
+	while(i<n){
+		t=ss[i];
+		j=i-1;
+		while(j>=0&&t<ss[j]){
+			ss[j+1]=ss[j];
+			j=j-1;
+		}
+		ss[j+1]=t;
+		i=i+1;
+	}
+	i=0;
+	while(i<n){
+		output(ss[i]);
+		i=i+1;
+	}
+}
+
+double k(){
+	return ss[9];
+}
+
+int a;
+int b;
+int h(int k){
+ 	int aa;
+	int bb;
+	if(k==1)
+		return 1;
+	else if(k==2)
+		return 1;
+	else{
+		int u;u=h(k-1);
+		int v;v=h(k-2);
+		return u+v;
+	}
+}
+int gcd(int u,int v){
+	if(v==0)
+		return u;
+	else{
+		return gcd(v,u%v);
+	}
+}
+begin
+	int m;
+	m=1;
+	int n;
+	n=5;
+	if(m<=n)
+		m=n+1;
+	else
+		m=n-1;
+	output(gcd(144,24));
+end
